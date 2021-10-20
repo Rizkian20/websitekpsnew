@@ -37,4 +37,17 @@ class M_portofolio extends CI_Model
         }
         return $portofolio;
     }
+
+    //ambil portofolio berdasarkan id
+    public function get_portofolioid($id_portofolio)
+    {
+        return $this->db->get_where('portofolio', ['id_portofolio' => $id_portofolio])->row_array();
+    }
+
+    //hapus portofolio
+    public function hapus_portofolio($id_portofolio)
+    {
+        $this->db->where('id_portofolio', $id_portofolio);
+        $this->db->delete('portofolio');
+    }
 }

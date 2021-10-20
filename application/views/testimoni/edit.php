@@ -38,7 +38,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary btn-sm ">Edit testimoni</button>
-                <button type="button" class="btn btn-danger btn-sm float-right" role="button">Kembali</button>
+                <button type="button" class="btn btn-danger btn-sm float-right" role="button" onclick="history.back();">Kembali</button>
             </div>
             <?= form_close(); ?>
         </div>

@@ -16,8 +16,8 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary"><?= $title ?></h6>
             <hr class="sidebar-divider">
-            <a class="btn btn-primary btn-sm" href="<?= base_url('tentangkami/tambah'); ?>" type="button">Tambah Visi</a>
-            <a class="btn btn-primary btn-sm" href="<?= base_url('tentangkami/tambahmisi'); ?>" type="button">Tambah Misi</a>
+            <a class="btn btn-primary btn-sm" href="<?= base_url('tentangkami/tambah_visi'); ?>" type="button">Tambah Visi</a>
+            <a class="btn btn-primary btn-sm" href="<?= base_url('tentangkami/tambah_misi'); ?>" type="button">Tambah Misi</a>
         </div>
         <div class="card-body">
             <div class="table">
@@ -34,12 +34,11 @@
                     <tbody>
                         <?php foreach ($visi as $t => $value) : ?>
                             <tr>
-                                <td class="text-center"><?= $value['id_visi'] ?></td>
+                                <td class="text-center"><?= $t + 1 ?></td>
                                 <td><?= $value['visiperusahaan'] ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-info btn-sm" href="<?= base_url() ?>tentangkami/detail/<?= $value['id_visi']; ?>" role="button">Detail</a>
-                                    <a class="btn btn-warning btn-sm" href="<?= base_url() ?>tentangkami/edit/<?= $value['id_visi']; ?>" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-sm" href="<?= base_url() ?>tentangkami/hapus/<?= $value['id_visi']; ?>" role="button" onclick="return confirm('Apakah yakin mau dihapus?');">Hapus</a>
+                                    <a class="btn btn-warning btn-sm" href="<?= base_url() ?>tentangkami/edit_visi/<?= $value['id_visi']; ?>" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-sm" href="<?= base_url() ?>tentangkami/hapus_visi/<?= $value['id_visi']; ?>" role="button" onclick="return confirm('Apakah yakin mau dihapus?');">Hapus</a>
                                 </td>
                             </tr>
                         <?php endforeach ?>
@@ -61,12 +60,11 @@
                     <tbody>
                         <?php foreach ($misi as $m => $value) : ?>
                             <tr>
-                                <td class="text-center"><?= $value['id_misi'] ?></td>
+                                <td class="text-center"><?= $m + 1 ?></td>
                                 <td><?= $value['misiperusahaan'] ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-info btn-sm" href="<?= base_url() ?>tentangkami/detail/<?= $value['id_misi']; ?>" role="button">Detail</a>
-                                    <a class="btn btn-warning btn-sm" href="<?= base_url() ?>tentangkami/edit/<?= $value['id_misi']; ?>" role="button">Edit</a>
-                                    <a class="btn btn-danger btn-sm" href="<?= base_url() ?>tentangkami/hapus/<?= $value['id_misi']; ?>" role="button" onclick="return confirm('Apakah yakin mau dihapus?');">Hapus</a>
+                                    <a class="btn btn-warning btn-sm" href="<?= base_url() ?>tentangkami/edit_misi/<?= $value['id_misi']; ?>" role="button">Edit</a>
+                                    <a class="btn btn-danger btn-sm" href="<?= base_url() ?>tentangkami/hapus_misi/<?= $value['id_misi']; ?>" role="button" onclick="return confirm('Apakah yakin mau dihapus?');">Hapus</a>
                                 </td>
                             </tr>
                         <?php endforeach ?>

@@ -26,7 +26,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary btn-sm ">Edit Layanan</button>
-                    <button type="button" class="btn btn-danger btn-sm float-right " data-dismiss="modal">Kembali</button>
+                    <button type="button" class="btn btn-danger btn-sm float-right " data-dismiss="modal" onclick="history.back();">Kembali</button>
 
                 </div>
 

@@ -39,7 +39,7 @@ class Auth extends CI_Controller
                 ];
                 $this->session->set_userdata($data);
                 echo $this->session->set_userdata($data);
-                redirect('admin');
+                redirect('dashboard');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                 Password salah!

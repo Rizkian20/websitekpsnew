@@ -25,7 +25,7 @@
                     <img src="<?= base_url() ?>assets_p/image/slideshow/<?= $slideshow['g_slideshow'] ?>" width="400px" id="image_load" readonly>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger btn-sm float-right " data-dismiss="modal">Kembali</button>
+                    <button type="button" class="btn btn-danger btn-sm float-right " data-dismiss="modal" onclick="history.back();">Kembali</button>
                 </div>
             </form>
         </div>

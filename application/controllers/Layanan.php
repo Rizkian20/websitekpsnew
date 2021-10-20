@@ -7,11 +7,11 @@ class Layanan extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->library('form_validation');
-        $this->load->model('m_layanan');
         if (!$this->session->userdata('username')) {
             redirect('auth');
         }
+        $this->load->library('form_validation');
+        $this->load->model('m_layanan');
     }
 
     public function index()

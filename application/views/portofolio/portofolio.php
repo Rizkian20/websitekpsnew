@@ -36,6 +36,7 @@
                                 <td><?= $value['kategori_p'] ?></td>
                                 <td><img src="<?= base_url() ?>assets_p/image/portofolio/<?= $value['gambar_p'] ?>" alt="" width="200px"></td>
                                 <td class="text-center">
+                                    <a class="btn btn-info btn-sm" href="<?= base_url() ?>portofolio/detail/<?= $value['id_portofolio']; ?>" role="button">Detail</a>
                                     <a class="btn btn-warning btn-sm" href="<?= base_url() ?>portofolio/edit/<?= $value['id_portofolio']; ?>" role="button">Edit</a>
                                     <a class="btn btn-danger btn-sm" href="<?= base_url() ?>portofolio/hapus/<?= $value['id_portofolio']; ?>" role="button" onclick="return confirm('Apakah yakin mau dihapus?');">Hapus</a>
                                 </td>

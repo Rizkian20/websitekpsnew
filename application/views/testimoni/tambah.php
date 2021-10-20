@@ -37,7 +37,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary btn-sm ">Tambah testimoni</button>
-                <button type="button" class="btn btn-danger btn-sm float-right" role="button">Kembali</button>
+                <button type="button" class="btn btn-danger btn-sm float-right" role="button" onclick="history.back();">Kembali</button>
             </div>
             <?= form_close(); ?>
         </div>
@@ -53,7 +53,7 @@
         reader.readAsDataURL(input.files[0]);
     }
 
-    $("#foto").change(function() {
+    $(" #foto").change(function() {
         preview(this);
     });
 </script>

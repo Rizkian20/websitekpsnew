@@ -354,7 +354,7 @@
         </div>
     </section><!-- End Contact Section -->
 
-    <section id="statistik">
+    <!-- <section id="statistik">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -379,7 +379,7 @@
             </table>
         </div>
 
-    </section>
+    </section> -->
 </main><!-- End #main -->
 
 
