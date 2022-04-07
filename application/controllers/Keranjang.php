@@ -5,6 +5,9 @@ class Keranjang extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!$this->session->userdata('username')) {
+            redirect('auth');
+        }
         $this->load->library('form_validation');
         $this->load->model('m_keranjang');
         $this->load->library('pagination');
