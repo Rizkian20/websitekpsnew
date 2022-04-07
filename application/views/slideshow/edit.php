@@ -18,7 +18,7 @@
             </div>
             <div class="card-body">
                 <?= form_open_multipart('slideshow/edit/' . $slideshow['id_slideshow']); ?>
-                <input type="hidden" name="id_layanan" v1alue="<?= $slideshow['id_slideshow']; ?>">
+                <input type="hidden" name="id_slideshow" value="<?= $slideshow['id_slideshow']; ?>">
                 <div class="form-group">
                     <label for="judul" style="font-size: 15px">Judul</label>
                     <input name="judul" type="text" class="form-control col-md-12 col-12" id="judul" value="<?= $slideshow['j_slideshow'] ?>">

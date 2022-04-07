@@ -17,13 +17,13 @@
         <div class="carousel-inner" role="listbox">
 
             <!-- Slide -->
-            <?php foreach ($slideshow as $s => $value) : ?>
-                <div class="carousel-item <?= $s != 0 ?: 'active'; ?>" style="background-image: url('<?= base_url() ?>assets_p/image/slideshow/<?= $value['g_slideshow'] ?>')">
+            <?php foreach ($berita as $b => $value) : ?>
+                <div class="carousel-item <?= $b != 0 ?: 'active'; ?>" style="background-image: url('<?= base_url() ?>assets_p/image/berita/<?= $value['g_berita'] ?>')">
                     <div class="carousel-container">
                         <div class="container">
-                            <h2 class="animate__animated animate__fadeInDown"><?= $value['j_slideshow'] ?></h2>
-                            <p class="animate__animated animate__fadeInUp"><?= $value['d_slideshow'] ?></p>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                            <h2 class="animate__animated animate__fadeInDown"><?= $value['judul'] ?></h2>
+                            <p class="text" class="animate__animated animate__fadeInUp"><?= strip_tags($value['isi']) ?></p>
+                            <a href="<?= base_url('berita/beritasingle/' . $value['id_berita']); ?>" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -69,42 +69,7 @@
         </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Clients Section ======= -->
 
-    <!-- <section id="clients" class="clients section-bg">
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets_p/img/clients/client-1.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets_p/img/clients/client-2.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets_p/img/clients/client-3.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets_p/img/clients/client-4.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets_p/img/clients/client-5.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets_p/img/clients/client-6.png" class="img-fluid" alt="">
-                </div>
-
-            </div>
-
-        </div>
-    </section> -->
-    <!-- End Clients Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -133,12 +98,12 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio"> -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
 
             <div class="section-title">
                 <h2>Portofolio</h2>
-                <p>Recent Works</p>
+                <p>Pekerjaan Terbaru</p>
             </div>
 
             <div class="row">
@@ -147,7 +112,7 @@
 
                         <li data-filter="*" class="filter-active">Semua</li>
                         <?php foreach ($kategori as $k => $value) : ?>
-                            <li data-filter=".filter-<?= $value['kategori_p'] ?>"><?= $value['kategori_p'] ?></li>
+                            <li data-filter=".filter-<?= str_replace(' ', '', $value['kategori_p']) ?>"><?= $value['kategori_p'] ?></li>
                         <?php endforeach ?>
                     </ul>
                 </div>
@@ -155,7 +120,7 @@
 
             <div class="row portfolio-container">
                 <?php foreach ($portofolio as $p => $value) : ?>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-<?= $value['kategori_p'] ?>">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-<?= str_replace(' ', '', $value['kategori_p']) ?>">
                         <div class="portfolio-wrap">
                             <img src="<?= base_url() ?>assets_p/image/portofolio/<?= $value['gambar_p'] ?>" class="img-fluid" alt="">
                             <div class="portfolio-info">
@@ -163,44 +128,15 @@
                                 <p><?= $value['kategori_p'] ?></p>
                                 <div class="portfolio-links">
                                     <a href="<?= base_url() ?>assets_p/image/portofolio/<?= $value['gambar_p'] ?>" data-gall="portfolioGallery" class="venobox" title="<?= $value['judul_p'] ?>"><i class="bx bx-plus"></i></a>
-                                    <a href="<?= base_url('portofolio/detail') ?>" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                    <a href="<?= base_url() ?>home/portfoliodetail/<?= $value['id_portofolio'] ?>" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php endforeach ?>
             </div>
-
         </div>
     </section><!-- End Portfolio Section -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-
-    <!-- <div class="container">
-
-        <div class="row" id="portfolio-details" class="portfolio-details">
-
-            <div class="col-lg-8">
-                <h2 class="portfolio-title">Detail Portofolio</h2>
-                <div class="owl-carousel portfolio-details-carousel">
-                    <img src="<?= base_url() ?>assets_p/image/portofolio/<?= $detail['gambar_p'] ?>" class="img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="col-lg-4 portfolio-info">
-                <h3>Deskripsi</h3>
-                <ul>
-                    <li><strong>Kategori</strong><?= $detail['kategori_p'] ?></li>
-                </ul>
-
-                <p>
-                    <?= $detail['detail_p'] ?>
-                </p>
-            </div>
-
-        </div>
-
-    </div> -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
@@ -230,7 +166,7 @@
             </div>
 
         </div>
-    </section> <!-- End Testimonials Section --> -->
+    </section> <!-- End Testimonials Section -->
 
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="blog">
@@ -245,7 +181,7 @@
                         <article class="entry">
 
                             <div class="entry-img">
-                                <img src="<?= base_url() ?>assets_p/image/berita/<?= $value['g_berita'] ?>" alt="" class="img-fluid">
+                                <img src="<?= base_url() ?>assets_p/image/berita/<?= $value['g_berita'] ?>" width="400px" alt="" class="img-fluid">
                             </div>
 
                             <h2 class="entry-title">
@@ -261,7 +197,6 @@
 
                             <div class="entry-content">
                                 <p class="text">
-
                                     <?= strip_tags($value['isi']) ?>
                                 </p>
                                 <div class="read-more">
@@ -276,6 +211,89 @@
             </div>
         </div>
     </section><!-- End Blog Section  -->
+    <!-- ======= Clients Section ======= -->
+
+    <section id="lowongan" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Info</h2>
+                <p>Info Lowongan Pekerjaan</p>
+            </div>
+            <div class="row mb-2">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <img src="<?= base_url() ?>assets_p/image/loker/loker.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+                    <div class="content pt-4 pt-lg-0">
+                        <h3>Lowongan Posisi Toko</h3>
+                        <p class="font-italic">
+                            Kami sedang membutuhkan tenaga kerja baru untuk Posisi Toko, berikut beberapa kriteria yang kami inginkan :
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> Laki-Laki/perempuan</li>
+                            <li><i class="ri-check-double-line"></i> Usia maksimal 24 tahun</li>
+                            <li><i class="ri-check-double-line"></i> Minimal lulusan SMA/sederajat</li>
+                            <li><i class="ri-check-double-line"></i> Dapat mengoperasikan komputer (ms.word & excel)</li>
+                            <li><i class="ri-check-double-line"></i> Dapat bekerja secara team maupun individu</li>
+                            <li><i class="ri-check-double-line"></i> Dapat bekerja secara di bawah tekanan</li>
+                            <li><i class="ri-check-double-line"></i> Dapat berkomunikasi dengan baik dan responsif</li>
+                            <li><i class="ri-check-double-line"></i> Jujur, rajin dan bertanggungjawab</li>
+                            <li><i class="ri-check-double-line"></i> Mempunyai pengalaman di bidang marketing (Nilai Tambah)</li>
+                        </ul>
+                        <p>
+                            Dengan ini kami ucapkan banyak terimakasih kepada semua pihak yang telah berpartisipasi.
+                        </p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSddaDkcSzRTvtdbqHEwh9eC4qtVFVYaHjNOO9mlFSV7uAwsxA/viewform" target="_blank">
+                            <button class="btn btn-danger btn-get-started mb-5">Daftar Sekarang</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <img src="<?= base_url() ?>assets_p/image/loker/network_engineer.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+                    <div class="content pt-4 pt-lg-0">
+                        <h3>Lowongan Teknisi Komputer & Jaringan</h3>
+                        <p class="font-italic">
+                            Kami sedang membutuhkan tenaga kerja baru sebagai Teknisi Komputer & Jaringan, berikut beberapa keriteria yang kami inginkan :
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> Laki-Laki</li>
+                            <li><i class="ri-check-double-line"></i> Lulusan SMK (Jurusan Elektronika, Teknik Komputer Jaringan)</li>
+                            <li><i class="ri-check-double-line"></i> Attitude baik, tekun belajar, kemampuan bekerja dalam tim.</li>
+                            <li><i class="ri-check-double-line"></i> Usia Max 24 th.</li>
+                            <li><i class="ri-check-double-line"></i> Penempatan Jogja & Kebumen</li>
+                        </ul>
+                        <p>
+                            Dengan ini kami ucapkan banyak terimakasih kepada semua pihak yang telah berpartisipasi.
+                        </p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSddaDkcSzRTvtdbqHEwh9eC4qtVFVYaHjNOO9mlFSV7uAwsxA/viewform" target="_blank">
+                            <button class="btn btn-danger btn-get-started">Daftar Sekarang</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+
+    <section id="clients" class="clients section-bg">
+        <div class="container">
+
+            <div class="row">
+                <?php foreach ($clients as $c => $value) : ?>
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="<?= base_url() ?>assets_p/image/clients/<?= $value['logo_clients'] ?>" class="img-fluid" alt="">
+                    </div>
+                <?php endforeach ?>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Clients Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">

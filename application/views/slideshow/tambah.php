@@ -24,11 +24,6 @@
             <div class="form-group">
                 <img src="<?= base_url() ?>assets_p/image/slideshow/noimage.jpg" width="400px" id="image_load">
             </div>
-            <!-- <div class="form-group">
-                <label for="g_slideshow">Pilih Gambar</label>
-                <input type="file" class="form-control-file" id="g_slideshow" name="g_slideshow" size="20">
-                <small class="form-text text-danger"><?= $this->session->flashdata('flashgambar') ?></small>
-            </div> -->
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary btn-sm ">Tambah Slideshow</button>
                 <button type="button" class="btn btn-danger btn-sm float-right" role="button">Kembali</button>

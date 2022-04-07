@@ -1,17 +1,3 @@
-<script>
-    function preview(input) {
-        if (input.files && input.files[0])
-            var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#image_load').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-
-    $("#g_berita").change(function() {
-        preview(this);
-    });
-</script>
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -72,3 +58,17 @@
         </div>
     </div>
 </div>
+<script>
+    function preview(input) {
+        if (input.files && input.files[0])
+            var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#image_load').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    $("#g_berita").change(function() {
+        preview(this);
+    });
+</script>

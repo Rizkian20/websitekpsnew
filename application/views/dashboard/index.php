@@ -15,10 +15,11 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Dashboard Website</h6>
-            <hr class="sidebar-divider">
         </div>
+
         <div class="card-body">
             <div class="table-responsive col-4">
+                <h6 class="m-0 font-weight-bold text-primary mb-2">Jumlah Pengunjung</h6>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>

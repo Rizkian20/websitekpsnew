@@ -34,7 +34,7 @@
                     <small class="form-text text-danger"><?= form_error('kategori'); ?></small>
                 </div>
                 <div class="form-group">
-                    <label for="judul" style="font-size: 15px"><span>Judul</span></label>
+                    <label for="judul" style="font-size: 15px"><span>Nama Portofolio</span></label>
                     <input name="judul" type="text" class="form-control" id="judul">
                     <small class="form-text text-danger"><?= form_error('judul'); ?></small>
                 </div>

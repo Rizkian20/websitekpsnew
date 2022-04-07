@@ -28,12 +28,6 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url() ?>assets_p/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Sailor - v2.3.1
-  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -58,7 +52,8 @@
               <?php endforeach ?>
             </ul>
           <li><a href="<?= base_url(); ?>berita/index">Berita</a></li>
-          <li><a href="<?= base_url(); ?>#contact">Kontak Kami</a></li>
+          <li><a href="<?= base_url(); ?>katalog/index">Katalog</a></li>
+          <li><a href="<?= base_url(); ?>#contact">Kontak</a></li>
         </ul>
 
       </nav><!-- .nav-menu -->

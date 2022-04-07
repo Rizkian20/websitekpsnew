@@ -95,12 +95,11 @@ class Portofolio extends CI_Controller
         $data['portofolio'] = $this->m_portofolio->get_portofolioid($id_portofolio);
         $data['title'] = 'Edit Portofolio';
 
-
         $this->form_validation->set_rules('kategori', 'Kategori', 'required');
         $this->form_validation->set_rules('detail', 'Detail', 'required');
         $this->form_validation->set_rules('judul', 'Judul', 'required');
-        if (empty($_FILES['gambar']['name'])) {
-            $this->form_validation->set_rules('gambar', 'Gambar', 'required');
+        if (empty($_FILES['gambar_p']['name'])) {
+            $this->form_validation->set_rules('gambar_p', 'Gambar', 'required');
         }
 
         if ($this->form_validation->run() == FALSE) {
@@ -111,14 +110,14 @@ class Portofolio extends CI_Controller
             $this->load->view('temp_a/adm_footer');
         } else {
             $this->load->library('upload');
-            if (!empty($_FILES['g_portofolio']['name'])) {
+            if (!empty($_FILES['gambar_p']['name'])) {
                 $config['upload_path']          = './assets_p/image/portofolio/';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg|bmp|svg';
                 $config['overwrite']            = true;
                 $config['max_size']             = 2048;
 
                 $this->upload->initialize($config);
-                if ($this->upload->do_upload('g_portofolio')) {
+                if ($this->upload->do_upload('gambar_p')) {
                     $gambar = $this->upload->data();
                     $file_name = $gambar['file_name'];
 

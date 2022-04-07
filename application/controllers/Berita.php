@@ -21,7 +21,7 @@ class berita extends CI_Controller
         // Config
         $config['base_url'] = 'http://localhost/php/kps/berita/index';
         $config['total_rows'] = $this->m_berita->jumlah_berita();
-        $config['per_page'] = 2;
+        $config['per_page'] = 8;
         //Initialize
         $this->pagination->initialize($config);
 

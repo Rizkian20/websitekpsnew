@@ -25,7 +25,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Manajemen
+        Manajemen Website
     </div>
 
     <li class="nav-item">
@@ -36,7 +36,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('layanan/index'); ?>">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="icofont-listine-dots"></i>
             <span>Layanan</span></a>
     </li>
 
@@ -66,6 +66,21 @@
         <a class="nav-link" href="<?= base_url('portofolio/index'); ?>">
             <i class="icofont-document-folder"></i>
             <span>Portofolio</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('clients/index'); ?>">
+            <i class="icofont-ui-contact-list"></i>
+            <span>Clients</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('katalogadmin/index'); ?>">
+            <i class="icofont-database"></i>
+            <span>Data Barang</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('dataorder/index'); ?>">
+            <i class="icofont-database"></i>
+            <span>Data Order</span></a>
     </li>
 
     <hr class="sidebar-divider my-0">

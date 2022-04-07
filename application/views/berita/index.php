@@ -89,12 +89,13 @@
             <div class="sidebar-item categories">
               <?php foreach ($kategori as $b => $value) : ?>
                 <ul>
-                  <li><a href="#"><?= $value['kategori']; ?> <span>(<?= $value['jumlah'] ?>)</span></a></li>
+                  <li><a href="#"><?= $value['kategori']; ?> <span>(<?= $value['jumlah'] ?>)</span></a></li> <!-- ????? -->
                 </ul>
+
               <?php endforeach ?>
             </div><!-- End sidebar categories-->
 
-            <h3 class="sidebar-title">Recent Posts</h3>
+            <h3 class="sidebar-title">Postingan Terbaru</h3>
             <div class="sidebar-item recent-posts">
               <?php foreach ($list_berita as $b => $value) : ?>
                 <div class="post-item clearfix">

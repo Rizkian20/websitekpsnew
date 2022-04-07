@@ -65,7 +65,7 @@
               <div class="sidebar-item categories">
                 <?php foreach ($kategori as $b => $value) : ?>
                   <ul>
-                    <li><a href="#"><?= $value['kategori']; ?> <span>(<?= $value['jumlah'] ?>)</span></a></li>
+                    <li><a href="#"><?= $value['kategori']; ?> <span>(<?= $value['jumlah'] ?>)</span></a></li><!-- ????? -->
                   </ul>
                 <?php endforeach ?>
               </div><!-- End sidebar categories-->

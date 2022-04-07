@@ -22,11 +22,6 @@
                 <input name="isi" type="text" class="form-control" id="isi">
                 <small class="form-text text-danger"><?= form_error('isi'); ?></small>
             </div>
-            <!-- <div class="form-group">
-                    <label for="gambar" style="font-size: 15px"><span>Gambar</span></label>
-                    <input name="gambar" type="text" class="form-control" id="gambar">
-                    <small class="form-text text-danger"><?= form_error('gambar'); ?></small>
-                </div>-->
             <div class="form-group">
                 <label for="foto">Pilih Gambar</label>
                 <input type="file" class="form-control-file" id="foto" name="foto" size="20">

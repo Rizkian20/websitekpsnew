@@ -25,7 +25,9 @@
                         <tr>
                             <th width="3%" class="text-center">Nomor</th>
                             <th class="text-center">Kategori</th>
-                            <th width="30%" class="text-center">Gambar</th>
+                            <th class="text-center">Nama Portofolio</th>
+                            <th class="text-center">Gambar</th>
+                            <th class="text-center">Deskripsi</th>
                             <th width="20%" class="text-center">Aksi</th>
                         </tr>
                     </thead>
@@ -34,9 +36,10 @@
                             <tr>
                                 <td class="text-center"><?= ++$start ?></td>
                                 <td><?= $value['kategori_p'] ?></td>
+                                <td><?= $value['judul_p'] ?></td>
                                 <td><img src="<?= base_url() ?>assets_p/image/portofolio/<?= $value['gambar_p'] ?>" alt="" width="200px"></td>
+                                <td><?= $value['detail_p'] ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-info btn-sm" href="<?= base_url() ?>portofolio/detail/<?= $value['id_portofolio']; ?>" role="button">Detail</a>
                                     <a class="btn btn-warning btn-sm" href="<?= base_url() ?>portofolio/edit/<?= $value['id_portofolio']; ?>" role="button">Edit</a>
                                     <a class="btn btn-danger btn-sm" href="<?= base_url() ?>portofolio/hapus/<?= $value['id_portofolio']; ?>" role="button" onclick="return confirm('Apakah yakin mau dihapus?');">Hapus</a>
                                 </td>

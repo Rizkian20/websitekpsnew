@@ -29,18 +29,6 @@ class M_slideshow extends CI_Model
         return $this->db->get_where('slideshow', ['id_slideshow' => $id_slideshow])->row_array();
     }
 
-    //edit slideshow
-    public function edit_slideshow()
-    {
-        $data  = [
-            "j_slideshow" => $this->input->post('judul', true),
-            "d_slideshow" => $this->input->post('deskripsi', true),
-            "g_slideshow" => $this->input->post('gambar', true),
-        ];
-        $this->db->where('id_slideshow', $this->input->post('id_slideshow'));
-        $this->db->update('slideshow', $data);
-    }
-
 
     public function hapus_slideshow($id_slideshow)
     {
