@@ -21,7 +21,7 @@ class Clients extends CI_Controller
         // Load Library Pagination
         $this->load->library('pagination');
         // Config
-        $config['base_url'] = 'http://localhost/php/kps/clients/index';
+        $config['base_url'] = site_url('clients/index');
         $config['total_rows'] = $this->m_clients->jumlah_clients();
         $config['per_page'] = 5;
         //Initialize

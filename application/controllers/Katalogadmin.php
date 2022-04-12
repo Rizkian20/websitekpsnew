@@ -20,7 +20,7 @@ class Katalogadmin extends CI_Controller
         // Load Library Pagination
         $this->load->library('pagination');
         // Config
-        $config['base_url'] = 'http://localhost/php/kps/katalogadmin/index';
+        $config['base_url'] = site_url('katalogadmin/index');
         $config['total_rows'] = $this->m_katalogadmin->jumlah_kat_barang();
         $config['per_page'] = 20;
         //Initialize
@@ -123,7 +123,7 @@ class Katalogadmin extends CI_Controller
         $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $data['title'] = 'Data Barang';
 
-        $config['base_url'] = 'http://localhost/php/kps/katalogadmin/detailkategori/' . $id;
+        $config['base_url'] = site_url('katalogadmin/detailkategori/') . $id;
         $config['total_rows'] = $this->m_katalogadmin->jumlah_data_barang($id);
         $config['per_page'] = 20;
         //Initialize
@@ -145,7 +145,7 @@ class Katalogadmin extends CI_Controller
         $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $keyword = html_escape($keyword = $this->input->post('keyword', true));
 
-        $config['base_url'] = 'http://localhost/php/kps/katalogadmin/searchkategori';
+        $config['base_url'] = site_url('katalogadmin/searchkategori');
         $config['total_rows'] = $this->m_katalogadmin->jumlah_kat_barang($keyword);
         $config['per_page'] = 20;
         //Initialize

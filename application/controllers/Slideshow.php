@@ -21,7 +21,7 @@ class Slideshow extends CI_Controller
         // Load Library Pagination
         $this->load->library('pagination');
         // Config
-        $config['base_url'] = 'http://localhost/php/kps/slideshow/index';
+        $config['base_url'] = site_url('slideshow/index');
         $config['total_rows'] = $this->m_slideshow->jumlah_slideshow();
         $config['per_page'] = 5;
         //Initialize

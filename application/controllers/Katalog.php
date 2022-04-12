@@ -17,6 +17,7 @@ class Katalog extends CI_Controller
         $data['daftarlayanan'] = $this->db->get('daftarlayanan')->result_array();
 
         $config['base_url'] = 'http://localhost/php/kps/katalog/index';
+        $config['base_url'] = site_url('katalog/index');
         $config['total_rows'] = $this->m_katalog->jumlah_kat_barang();
         $config['per_page'] = 20;
         //Initialize

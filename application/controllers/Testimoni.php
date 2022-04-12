@@ -21,7 +21,7 @@ class Testimoni extends CI_Controller
         // Load Library Pagination
         $this->load->library('pagination');
         // Config
-        $config['base_url'] = 'http://localhost/php/kps/testimoni/index';
+        $config['base_url'] = site_url('testimoni/index');
         $config['total_rows'] = $this->m_testimoni->jumlah_testimoni();
         $config['per_page'] = 5;
         //Initialize

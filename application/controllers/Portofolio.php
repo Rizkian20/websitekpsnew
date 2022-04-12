@@ -21,7 +21,7 @@ class Portofolio extends CI_Controller
         // Load Library Pagination
         $this->load->library('pagination');
         // Config
-        $config['base_url'] = 'http://localhost/php/kps/portofolio/index';
+        $config['base_url'] = site_url('portofolio/index');
         $config['total_rows'] = $this->m_portofolio->jumlah_portofolio();
         $config['per_page'] = 5;
         //Initialize

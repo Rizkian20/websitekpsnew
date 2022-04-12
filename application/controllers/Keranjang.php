@@ -21,7 +21,7 @@ class Keranjang extends CI_Controller
         // Load Library Pagination
         // $this->load->library('pagination');
         // Config
-        $config['base_url'] = 'http://localhost/php/kps/keranjang/index';
+        $config['base_url'] = site_url('keranjang/index');
         $config['total_rows'] = $this->m_keranjang->jumlah_kat_barang();
         $config['per_page'] = 20;
         //Initialize
